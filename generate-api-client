@@ -17,4 +17,5 @@ openapi-generator-cli generate -g ruby -i tmp/linode/openapi.yaml -o gem \
     -p gemDescription="OpenAPI Client for Linode API" \
     -p gemSummary="OpenAPI Client for Linode API" \
     -p gemVersion=$api_version \
+    -p gemHomepage="https://github.com/samk1/linode-ruby-openapi-client/tree/main/gem" \
     -p useAutoload=true
