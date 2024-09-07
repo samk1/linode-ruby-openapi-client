@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+openapi_spec_url=${1:-https://raw.githubusercontent.com/linode/linode-api-docs/development/openapi.yaml}
+openapi_spec_file=tmp/linode/openapi.yaml
+
+mkdir -p $(dirname $openapi_spec_file)
+
+curl $openapi_spec_url -o $openapi_spec_file
+
+api_version=$(yq '.info.version' < $openapi_spec_file)
+
+JAVA_OPTS="-DmaxYamlCodePoints=99999999" \
+openapi-generator-cli generate -g ruby -i tmp/linode/openapi.yaml -o gem \
+    -p gemName=linode_openapi_client \
+    -p gemAuthor="Sam Kidman" \
+    -p gemAuthorEmail=samkidman@gmail.com \
+    -p gemDescription="OpenAPI Client for Linode API" \
+    -p gemSummary="OpenAPI Client for Linode API" \
+    -p gemVersion=$api_version \
+    -p useAutoload=true

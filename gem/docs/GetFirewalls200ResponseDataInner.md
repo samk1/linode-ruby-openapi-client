@@ -1,0 +1,30 @@
+# LinodeOpenapiClient::GetFirewalls200ResponseDataInner
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **tags** | **Array&lt;String&gt;** | __Filterable__ An array of tags applied to this object. Tags are for organizational purposes only. | [optional] |
+| **id** | **Integer** | __Filterable__, __Read-only__ The Firewall&#39;s unique ID. | [optional][readonly] |
+| **rules** | [**GetFirewalls200ResponseDataInnerRules**](GetFirewalls200ResponseDataInnerRules.md) |  | [optional] |
+| **created** | **Time** | __Filterable__, __Read-only__ When this Firewall was created. | [optional][readonly] |
+| **label** | **String** | __Filterable__ The Firewall&#39;s label, for display purposes only.  Firewall labels have the following constraints:    - Must begin and end with an alphanumeric character.   - May only consist of alphanumeric characters, hyphens (&#x60;-&#x60;), underscores (&#x60;_&#x60;) or periods (&#x60;.&#x60;).   - Cannot have two hyphens (&#x60;--&#x60;), underscores (&#x60;__&#x60;) or periods (&#x60;..&#x60;) in a row.   - Must be between 3 and 32 characters.   - Must be unique. | [optional] |
+| **status** | **String** | __Read-only__ The status of this Firewall.    - When a Firewall is first created its status is &#x60;enabled&#x60;.   - RUn the [Update a firewall](https://techdocs.akamai.com/linode-api/reference/put-firewall) operation to set a Firewall&#39;s status to &#x60;enabled&#x60; or &#x60;disabled&#x60;.   - RUn the [Delete a firewall](https://techdocs.akamai.com/linode-api/reference/delete-firewall) operation to delete a Firewall. | [optional][readonly] |
+| **updated** | **Time** | __Filterable__, __Read-only__ When this Firewall was last updated. | [optional][readonly] |
+
+## Example
+
+```ruby
+require 'linode_openapi_client'
+
+instance = LinodeOpenapiClient::GetFirewalls200ResponseDataInner.new(
+  tags: [&quot;example tag&quot;,&quot;another example&quot;],
+  id: 123,
+  rules: null,
+  created: null,
+  label: firewall123,
+  status: enabled,
+  updated: null
+)
+```
+
