@@ -11,5 +11,5 @@ Generator version: 7.8.0
 =end
 
 module LinodeOpenapiClient
-  VERSION = '1.0.0'
+  VERSION = '4.177.1'
 end

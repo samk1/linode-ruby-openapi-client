@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Sam Kidman"]
   s.email       = ["samkidman@gmail.com"]
-  s.homepage    = "https://openapi-generator.tech"
+  s.homepage    = "https://github.com/samk1/linode-ruby-openapi-client/tree/main/gem"
   s.summary     = "OpenAPI Client for Linode API"
   s.description = "OpenAPI Client for Linode API"
   s.license     = "Unlicense"

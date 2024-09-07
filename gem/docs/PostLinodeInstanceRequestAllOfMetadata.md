@@ -12,7 +12,7 @@
 require 'linode_openapi_client'
 
 instance = LinodeOpenapiClient::PostLinodeInstanceRequestAllOfMetadata.new(
-  user_data: [B@63124920
+  user_data: [B@1acf0944
 )
 ```
 
